@@ -3,11 +3,13 @@
 import Link from 'next/link'
 
 export default function ProductCard({ product }: any) {
+  const imageSrc = `/rang-jewelry${product.image}`
+
   return (
     <div className="product-card">
       <div className="product-image-wrapper">
         <img
-          src={product.image}
+          src={imageSrc}
           alt={product.name}
           className="product-image"
           onError={(e) => {
