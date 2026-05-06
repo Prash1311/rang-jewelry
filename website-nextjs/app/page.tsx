@@ -33,14 +33,30 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">
+      {/* Hero Section with Video Background */}
+      <section className="hero-section relative overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          className="hero-video"
+          poster="/images/bangles/Bangles-Collection-Showcase-01.mp4"
+        >
+          <source src="/images/bangles/Bangles-Collection-Showcase-01.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark Overlay for Text Readability */}
+        <div className="hero-overlay"></div>
+
+        {/* Hero Content */}
+        <div className="hero-content relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair text-white">
             RANG
           </h1>
           <p className="text-xl md:text-2xl mb-4 font-lora text-gold">The Colours of Tradition</p>
-          <p className="text-lg mb-8 text-gray-200">
+          <p className="text-lg mb-8 text-gray-100">
             Discover the authentic beauty of Rajputana artificial ornaments
           </p>
           <Link href="/products" className="btn-primary bg-gold hover:bg-rang-gold text-white">
