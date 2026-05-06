@@ -7,6 +7,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: website-nextjs
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -16,11 +21,13 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Install and Build
-        run: |
-          cd website-nextjs
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build static site
+        run: npm run build
+        env:
+          CI: true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
