@@ -41,9 +41,9 @@ export default function Home() {
           muted
           loop
           className="hero-video"
-          poster="/rang-jewelry/images/bangles/Bangles-Collection-Showcase-01.mp4"
+          poster="/images/bangles/Bangles-Collection-Showcase-01.mp4"
         >
-          <source src="/rang-jewelry/images/bangles/Bangles-Collection-Showcase-01.mp4" type="video/mp4" />
+          <source src="/images/bangles/Bangles-Collection-Showcase-01.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

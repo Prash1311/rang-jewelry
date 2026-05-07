@@ -3,7 +3,7 @@
 import Link from 'next/link'
 
 export default function ProductCard({ product }: any) {
-  const imageSrc = `/rang-jewelry${product.image}`
+  const imageSrc = product.image
 
   return (
     <div className="product-card">
